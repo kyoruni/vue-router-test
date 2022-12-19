@@ -49,8 +49,12 @@ const submit = () => {
     <h2>ポケモン新規登録</h2>
     <nav id="breadcrumbs">
       <ul>
-        <li>TOP</li>
-        <li>ポケモン一覧</li>
+        <li>
+          <RouterLink :to="{ name: 'TopPage' }">TOP</RouterLink>
+        </li>
+        <li>
+          <RouterLink :to="{ name: 'PokemonList' }">ポケモン一覧</RouterLink>
+        </li>
         <li>ポケモン新規登録</li>
       </ul>
     </nav>
