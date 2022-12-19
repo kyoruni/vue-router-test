@@ -25,6 +25,11 @@ const routeSettings: RouteRecordRaw[] = [
     component: () => {
       return import('@/views/PokemonDetail.vue');
     },
+    props: (routes) => {
+      return {
+        id: Number(routes.params.id),
+      }
+    },
   }
 ];
 
