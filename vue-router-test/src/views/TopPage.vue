@@ -1,5 +1,9 @@
+<script setup lang="ts">
+import { RouterLink } from 'vue-router';
+</script>
+
 <template>
-  <div id="top-page">
+  <div class="top-page">
     <h2>TopPage.vue</h2>
     <nav id="breadcrumbs">
       <ul>
@@ -7,7 +11,11 @@
       </ul>
     </nav>
     <section>
-      <p>管理ページ</p>
+      <p>
+        <RouterLink :to="{ name: 'PokemonList' }">
+          一覧ページ
+        </RouterLink>
+      </p>
     </section>
   </div>
 </template>

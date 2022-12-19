@@ -8,6 +8,16 @@ const routeSettings: RouteRecordRaw[] = [
     path: '/',
     name: 'TopPage',
     component: TopPage,
+  },
+  {
+    path: '/pokemons',
+    name: 'PokemonList',
+    // 動的インポート
+    // 表示が必要になってからインポートする
+    // memo: TopPageは必ず表示されるので、事前にインポートしていてよい
+    component: () => {
+      return import('@/views/PokemonList.vue');
+    },
   }
 ];
 
