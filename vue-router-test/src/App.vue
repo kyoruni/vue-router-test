@@ -8,26 +8,26 @@ const pokemons = new Map<number, Pokemon>();
 const initPokemons = () => {
   pokemons.set(1, {
     id: 1,
-    name: "フシギダネ",
-    type1: "くさ",
-    type2: "どく",
-    species: "たね",
+    name: 'フシギダネ',
+    type1: 'くさ',
+    type2: 'どく',
+    species: 'たね',
   });
   pokemons.set(4, {
     id: 4,
-    name: "ヒトカゲ",
-    type1: "ほのお",
-    species: "とかげ",
+    name: 'ヒトカゲ',
+    type1: 'ほのお',
+    species: 'とかげ',
   });
   pokemons.set(7, {
     id: 7,
-    name: "ゼニガメ",
-    type1: "みず",
-    species: "かめのこ",
+    name: 'ゼニガメ',
+    type1: 'みず',
+    species: 'かめのこ',
   });
 };
 initPokemons();
-provide("pokemons", reactive(pokemons));
+provide('pokemons', reactive(pokemons));
 </script>
 
 <template>
