@@ -37,6 +37,13 @@ const routeSettings: RouteRecordRaw[] = [
     component: () => {
       return import('@/views/PokemonAdd.vue');
     },
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () => {
+      return import('@/views/NotFound.vue');
+    }
   }
 ];
 
