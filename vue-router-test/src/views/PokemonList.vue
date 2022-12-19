@@ -21,6 +21,9 @@ const pokemons = inject('pokemons') as Map<number, Pokemon>;
     </nav>
     <section>
       <h3>ポケモン一覧</h3>
+      <p>
+        <RouterLink :to="{ name: 'PokemonAdd' }">新規登録</RouterLink>
+      </p>
       <ul>
         <li v-for="[id, pokemon] in pokemons" :key="id">
           ID: {{ id }}
