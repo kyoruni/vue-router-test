@@ -23,7 +23,8 @@ const pokemons = inject('pokemons') as Map<number, Pokemon>;
       <h3>ポケモン一覧</h3>
       <ul>
         <li v-for="[id, pokemon] in pokemons" :key="id">
-          ID: {{ id }} {{ pokemon.name }}
+          ID: {{ id }}
+          <RouterLink :to="{ name: 'PokemonDetail', params: { id: id } }">{{ pokemon.name }}</RouterLink>
         </li>
       </ul>
     </section>
