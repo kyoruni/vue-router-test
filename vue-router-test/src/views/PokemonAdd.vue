@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { inject, reactive } from 'vue';
-import { RouterLink } from 'vue-router';
+import { RouterLink, useRouter } from 'vue-router';
 import type { Pokemon } from '@/interfaces';
 
+const router = useRouter();
 const pokemons = inject('pokemons') as Map<number, Pokemon>;
 const pokemon: Pokemon = reactive(
   {
@@ -38,6 +39,8 @@ const types = [
 const submit = () => {
   console.log('submit');
   console.log(pokemon);
+  pokemons.set(pokemon.id, pokemon);
+  router.push({ name: 'PokemonList' });
 };
 </script>
 
